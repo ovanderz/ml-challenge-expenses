@@ -1,43 +1,27 @@
 ML Challenge Markdown
-# Wave Machine Learning Engineer Challenge
-Applicants for the Software Engineer (and Senior), Machine Learning(https://wave.bamboohr.co.uk/jobs/view.php?id=1) role at Wave must complete the following challenge, and submit a solution prior to the onsite interview. 
 
-The purpose of this exercise is to create something that we can work on together during the onsite. We do this so that you get a chance to collaborate with Wavers during the interview in a situation where you know something better than us (it's your code, after all!) 
-
-There isn't a hard deadline for this exercise; take as long as you need to complete it. However, in terms of total time spent actively working on the challenge, we ask that you not spend more than a few hours, as we value your time and are happy to leave things open to discussion in the onsite interview.
-
-Please use whatever programming language, libraries and framework you feel the most comfortable with.  Preference here at Wave is Python.
-
-Feel free to email [dev.careers@waveapps.com](dev.careers@waveapps.com) if you have any questions.
 
 ## Project Description
 Continue improvements in automation and enhancing the user experience are keys to what make Wave successful.  Simplifying the lives of our customers through automation is a key initiative for the machine learning team.  Your task is to solve the following questions around automation.
 
-### What your learning application must do:
-
-1. Your application must be able read provided comma separated files. 
-
-2. Similarly, your application must accept a separate comma separated file as validation data with the same format.
-3. You can make the following assumptions:
-	* Columns will always be in that order.
-	* There will always be data in each column.
- 	* There will always be a header line.
-
-An example input files named `training_data_example.csv`, `validation_data_example.csv` and `employee.csv` are included in this repo.  A sample code `file_parser.py` is provided in Python to help get you started with loading all the files.  You are welcome to use if you like.
-
-1. Your application must parse the given files.
-2. Your application should train only on the training data but report on its performance for both data sets.
-3. You are free to define appropriate performance metrics, in additional to any predefined, that fit the problem and chosen algorithm.
-4. You are welcome to answer one or more of the following questions.  Also, you are free to drill down further on any of these questions by providing additional insights.
-
-Your application should be easy to run, and should run on either Linux or Mac OS X.  It should not require any non open-source software.
-
-There are many ways and algorithms to solve these questions; we ask that you approach them in a way that showcases one of your strengths. We're happy to tweak the requirements slightly if it helps you show off one of your strengths.
 
 ### Questions to answer:
 1. Train a learning model that assigns each expense transaction to one of the set of predefined categories and evaluate it against the validation data provided.  The set of categories are those found in the "category" column in the training data. Report on accuracy and at least one other performance metric.
+Answer: 
+Open assRule.R in RStudio or and equivalent R reader.
+Some attributes were removed due to high entropy and therefore contained little to no relavant information for a dataset of the size. The assciation rules libraries were downloaded and applied to the training and validation datasets using the support,confidence and lift metrics.
+
+The confidence metric is used primarily due to the vectored condition it has to predict the category attribute. Other decisions were made and as described in the document.
+
 2. Mixing of personal and business expenses is a common problem for small business.  Create an algorithm that can separate any potential personal expenses in the training data.  Labels of personal and business expenses were deliberately not given as this is often the case in our system.  There is no right answer so it is important you provide any assumptions you have made.
+Answer:
+Open des_check.R in RStudio or and equivalent R reader.
+
+Given the limited data it is dificult to measure which purchases my be erroneos, however we may begin to classify each purchase to flag the potetially erroneous from the routine. For this a boolean classification model was chosen to seperate the seemingly routine from the unique purchase - which is assumed may have a higher probability of being erroneous. Further assesment classification is necessary on a richer dataset. 
+
 3. (Bonus) Train your learning algorithm for one of the above questions in a distributed fashion, such as using Spark.  Here, you can assume either the data or the model is too large/efficient to be process in a single computer.
+
+Due to a lack of computational power this question was not attempted. Pig and pyspark are languages in my repitoire and given the appropriate emulator can be displayed. 
 
 ### Documentation:
 
