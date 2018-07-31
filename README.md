@@ -7,6 +7,7 @@ Continue improvements in automation and enhancing the user experience are keys t
 
 ### Questions to answer:
 1. Train a learning model that assigns each expense transaction to one of the set of predefined categories and evaluate it against the validation data provided.  The set of categories are those found in the "category" column in the training data. Report on accuracy and at least one other performance metric.
+
 Answer: 
 Open assRule.R in RStudio or and equivalent R reader.
 Some attributes were removed due to high entropy and therefore contained little to no relavant information for a dataset of the size. The assciation rules libraries were downloaded and applied to the training and validation datasets using the support,confidence and lift metrics.
@@ -16,6 +17,7 @@ The confidence metric is used primarily due to the vectored condition it has to 
 The Association Classification was chose due to the categorical nature of the attributes. Tree classification would not provide greater insight beyond the confusion matrix analysis and clustering would produce limited results on the limited dataset. 
 
 2. Mixing of personal and business expenses is a common problem for small business.  Create an algorithm that can separate any potential personal expenses in the training data.  Labels of personal and business expenses were deliberately not given as this is often the case in our system.  There is no right answer so it is important you provide any assumptions you have made.
+
 Answer:
 Open des_check.R in RStudio or and equivalent R reader.
 
