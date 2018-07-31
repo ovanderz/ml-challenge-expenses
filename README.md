@@ -9,6 +9,7 @@ Continue improvements in automation and enhancing the user experience are keys t
 1. Train a learning model that assigns each expense transaction to one of the set of predefined categories and evaluate it against the validation data provided.  The set of categories are those found in the "category" column in the training data. Report on accuracy and at least one other performance metric.
 
 Answer: 
+
 Open assRule.R in RStudio or and equivalent R reader.
 Some attributes were removed due to high entropy and therefore contained little to no relavant information for a dataset of the size. The assciation rules libraries were downloaded and applied to the training and validation datasets using the support,confidence and lift metrics.
 
