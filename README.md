@@ -13,6 +13,8 @@ Some attributes were removed due to high entropy and therefore contained little 
 
 The confidence metric is used primarily due to the vectored condition it has to predict the category attribute. Other decisions were made and as described in the document.
 
+The Association Classification was chose due to the categorical nature of the attributes. Tree classification would not provide greater insight beyond the confusion matrix analysis and clustering would produce limited results on the limited dataset. 
+
 2. Mixing of personal and business expenses is a common problem for small business.  Create an algorithm that can separate any potential personal expenses in the training data.  Labels of personal and business expenses were deliberately not given as this is often the case in our system.  There is no right answer so it is important you provide any assumptions you have made.
 Answer:
 Open des_check.R in RStudio or and equivalent R reader.
